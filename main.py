@@ -1,4 +1,5 @@
-with open("books/frankenstein.txt") as f:
+file_name = "books/frankenstein.txt"
+with open(file_name) as f:
     file_contents = f.read()
     word_count = len(file_contents.split())
     count_dict = {}
@@ -22,7 +23,7 @@ with open("books/frankenstein.txt") as f:
         if tt[0].isalpha():
             alpha_count_list.append(tt)
 
-    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"--- Begin report of {file_name} ---")
     print(f"{word_count} words found in the document")
     print()
     for tt in alpha_count_list:
